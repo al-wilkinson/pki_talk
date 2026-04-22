@@ -1,0 +1,33 @@
+Create a markdown file explaining what I am doing from my comments and the openssl commands below.  Include explanatory notes of what is being done in each openssl commands
+
+# Set up two directories, one to act as a customer requesting a digital certificate, one to act as the CA signing the certificate after receiving a CSR.
+# Assume we are already in our desired starting directory.
+mkdir customer CA
+
+# Set up the CA directory to be able to create a certificate from a CSR
+cd CA
+# Generate CA's private key
+openssl genpkey -algorithm RSA -out CA.key -pkeyopt rsa_keygen_bits:4096
+# Generate a certificate from this private key
+openssl req -key CA.key -new -x509 -days 365 -out CA.crt
+# Enter appropriate values for CN etc.
+
+
+# Now go to the customer's directory to set up a key pair and generate a CSR
+cd ../customer
+# First create a key pair
+openssl genpkey -algorithm RSA -out private.key -pkeyopt rsa_keygen_bits:4096
+# Create the public key from this
+openssl pkey -in private.key -pubout -out public.key
+# Create a CSR
+openssl req -new -key private.key -out request.csr
+
+# "Send" this CSR to the CA
+cp request.csr ../CA
+
+# Now look at it from the CA's perspective
+cd ../CA
+# As the CA generate a new certificate, signed with the CA cert (CA.crt) we generated above, from the CSR 
+openssl x509 -req -in request.csr -CA CA.crt -CAkey CA.key -CAcreateserial -out server.crt -days 365 -sha256
+
+# Give server.crt back to the customer
