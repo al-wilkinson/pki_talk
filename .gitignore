@@ -1,0 +1,44 @@
+# Ignore contents of specific directories (but keep the folders themselves)
+customer/*
+CA/*
+
+
+# Private keys
+*.key
+*.pem
+*.p12
+*.pfx
+*.pkcs12
+*.p8
+
+# Public keys
+*.pub
+
+# Certificate files
+*.crt
+*.cer
+*.der
+*.csr
+
+# SSH keys (common naming patterns)
+id_rsa
+id_rsa.pub
+id_dsa
+id_dsa.pub
+id_ecdsa
+id_ecdsa.pub
+id_ed25519
+id_ed25519.pub
+
+# GPG keys
+*.gpg
+*.asc
+
+# Keystores / truststores (Java, etc.)
+*.jks
+*.keystore
+*.truststore
+
+# Misc security-related files
+*.ovpn
+*.cnf
