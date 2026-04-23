@@ -1,7 +1,14 @@
 ## Introduction
 
-The contents of this repo provide explanation of the demo part of an introductory level talk on PKI.  I wanted to demo, in a simple way, creating private/public key pairs, a CSR and a simple case of where a CA would fit in.
+The contents of this repo provide explanation of the demo part of an introductory level talk on Public Key Infrastructure.  I wanted to demo, in a simple way, creating private/public key pairs, a CSR and a simple case of where a CA would fit in.
 
+In 2026, it is impossible to ignore AI.  The repo includes ```prompt.txt``` which was used to generate everything below this introduction.  It is as the AI gave it to me with some very minor tweaks.
+
+The talk being _introductory level_:  as mentioned in the slides (link to follow) Dunning-Kruger applies in the PKI space.  Running PKI at scale is the work of a smart team, not a part time individual.  This will become even more evident as both certificate life spans and domain validation times shorten over the coming years.
+
+So, this is part of an _introductory level_ talk on PKI.  The focus is somewhat self-centred - the things that I struggled to understand when I was first creating CSRs as a sysadmin and the questions I get asked now.  (And no, I don't consider myself an SME in this are - that would be prime Dunning-Kruger!)
+
+The talk will cover.....
 
 ***
 
