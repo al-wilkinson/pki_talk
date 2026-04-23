@@ -1,4 +1,7 @@
-Below is a **ready‑to‑save Markdown file** that explains, step by step, what your comments and OpenSSL commands are doing. You can copy this directly into a file such as `openssl-ca-walkthrough.md`.
+## Introduction
+
+The contents of this repo provide explanation of the demo part of an introductory level talk on PKI.  I wanted to demo, in a simple way, creating private/public key pairs, a CSR and a simple case of where a CA would fit in.
+
 
 ***
 
