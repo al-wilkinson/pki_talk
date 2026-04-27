@@ -8,7 +8,6 @@ The talk being _introductory level_:  as mentioned in the slides (link to follow
 
 So, this is part of an _introductory level_ talk on PKI.  The focus is somewhat self-centred - the things that I struggled to understand when I was first creating CSRs as a sysadmin and the questions I get asked now.  (And no, I don't consider myself an SME in this are - that would be prime Dunning-Kruger!)
 
-The talk will cover.....
 
 ***
 
